@@ -32,3 +32,124 @@
   width: 80% !important;
   height: auto !important;
 }
+.hero-container{
+  background-image: url('https://cafeu.vercel.app/_next/static/media/banner-bg.563b99ab.jpg');
+  padding: 20px;
+}
+body, html{
+  margin: 0;
+  padding:0;
+}
+.secondary-text{
+  font-family: 'nunito sans';
+  color: #c33;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 7px;
+}
+
+.hero-main-text{
+  font-size: 40px;
+  font-weight: 800;
+  margin: 7px;
+  color: #292929;
+}
+.highlighted{
+  text-decoration: underline;
+  color: #c33;
+}
+
+.btn{
+  padding: 12px;
+  outline: none;
+  border:none;
+  margin: 10px;
+  
+}
+.btn-container{
+  display: flex;
+}
+
+.primary-hero-btn{
+  background-color: #c33;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.secondary-hero-btn{
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-icon{
+  color: #c33;
+  font-size: 22px;
+}
+.mobile-navbar{
+  display: block;
+  z-index:100;
+}
+.menu-btn{
+  z-index: 999;
+}
+@media screen and (max-width: 480px){
+  .navbar{
+    display: none;
+  }
+  .hero-container{
+    padding: 20px;
+  }
+  .logo{
+    width: 100px !important;
+  }
+  .hero-text{
+    width:100%;
+    display: block;
+    
+  }
+  .hero{
+    display:block;
+    padding-top:40px ;
+  }
+  .hero-image{
+    width: 100%;
+  }
+  .secondary-text{
+    font-size: 19px;
+    text-align: center;
+  }
+  .hero-main-text{
+    font-size: 30px;
+    text-align: center;
+  }
+  .hero-paragraph{
+    text-align: center;
+    font-size:16px;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .hero-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-navbar{
+    background-color: #fff;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    top:0;
+    padding: 20px;
+    text-align: center;
+    right: 0;
+  }
+}
+
