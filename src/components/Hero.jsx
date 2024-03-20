@@ -1,12 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
 import { FaPlayCircle } from "react-icons/fa";
-
+import { Manrope } from 'next/font/google'
+ 
+const manrope = Manrope({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 export default function Hero() {
   return (
     <div className="hero">
         <div className='hero-text'>
-            <p className='secondary-text'>
+            <p className={`${manrope.className} secondary-text`}>
                 Best In Cafeu
             </p>
             <h3 className='hero-main-text'>

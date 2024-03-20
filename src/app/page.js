@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Hero from '@/components/Hero'
 import Header from '@/components/Header'
+import Discover from '@/components/Discover'
+import Newsletter from '@/components/Newsletter'
+import About from '@/components/About'
 
 
 // If loading a variable font, you don't need to specify the font weight
@@ -18,6 +21,10 @@ export default function Home() {
     <Header />
     <Hero className={inter.className}/>
     </div>
+
+    <Discover/>
+    <Newsletter/>
+    <About/>
     </>
   )
 }
