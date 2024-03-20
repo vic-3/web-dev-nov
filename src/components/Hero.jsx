@@ -42,7 +42,7 @@ export default function Hero() {
                </div>
     </div>
         <div className='hero-image'>
-            <Image src={'https://cafeu.vercel.app/img/slider/first-slider.png'} width={100} height={100} className='food-plate'/>
+            <Image src={'https://cafeu.vercel.app/img/slider/first-slider.png'} width={100} height={100}  className='food-plate'/>
         </div>
     </div>
   )
