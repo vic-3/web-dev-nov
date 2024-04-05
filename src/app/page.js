@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Discover from '@/components/Discover'
 import Newsletter from '@/components/Newsletter'
 import About from '@/components/About'
+import 'animate.css'
 
 
 // If loading a variable font, you don't need to specify the font weight

@@ -12,14 +12,14 @@ export default function Hero() {
   return (
     <div className="hero">
         <div className='hero-text'>
-            <p className={`${manrope.className} secondary-text`}>
+            <p className={`${manrope.className} secondary-text animate__animated animate__fadeInDown`}>
                 Best In Cafeu
             </p>
-            <h3 className='hero-main-text'>
+            <h3 className='hero-main-text  animate__animated animate__fadeInDown'>
                 BBQ Chicken <span className='highlighted'>Salad</span> With Creamy Avocado
             </h3>
 
-            <p className='hero-paragraph'>
+            <p className='hero-paragraph animate__animated animate__fadeInUp animate__slow'>
             
                Lorem ipsum 
                Lorem ipsum 
