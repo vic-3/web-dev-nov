@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import './globals.css'
 import Head from 'next/head'
+import { ThemeContextProvider } from '@/components/ThemeContext'
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,8 +17,10 @@ export default function RootLayout({ children }) {
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet"/>
       </Head>
       <body>
-        
-        {children}
+        <ThemeContextProvider>
+           {children}
+
+        </ThemeContextProvider>
         
         </body>
     </html>

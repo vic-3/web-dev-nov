@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
+import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
 
@@ -27,6 +28,7 @@ export default function Header() {
     <button className='btn menu-btn' onClick={handleMenu}>
     <CiMenuBurger />
     </button>
+      <ThemeToggle/>
     <div className='navbar'>
         <Link  className='nav-link' href={'#'}>Home</Link>
         <Link className='nav-link' href={'#'}>about us</Link>
