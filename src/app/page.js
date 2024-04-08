@@ -14,7 +14,28 @@ const inter = Inter({
   display: 'swap',
 })
 
-export default function Home() {
+export default async function Home() {
+  // make a get request to /api/movies/
+
+ async function getMovies(){
+
+  // to handler error , we need to use our try ad catch block 
+  // so any error exception that is on the code will be caught and the 
+  // user will see a friendly error
+  try{
+       const res= await fetch('http://localhost:3000/api/movies/');
+    // no we convert the response sedt by the server in jso to object
+    return await res.json()
+  }
+  catch(err){
+    console.log("server err", err)
+  }
+ 
+
+  }
+
+  const data= await getMovies()
+  console.log(data)
   return (
     <>
     <div className='hero-container'>
