@@ -10,7 +10,7 @@ export default function Register() {
     const [FirstNameErr, setFirstNameErr]=useState('');
 
     // create a function to handle for submission
-    function submitHandler(e){
+    async function submitHandler(e){
         // prevent form default submit
         e.preventDefault();
         console.log(e)
@@ -30,6 +30,14 @@ export default function Register() {
         }
         else{
             // send user data to api
+            const res=await fetch('http://localhost:3000/api/register/',{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                // our body data type must be in json , so as to match the content-type data type(json)
+               body:JSON.stringify({firstName,lastName,email,password})
+        })
 
         }
 

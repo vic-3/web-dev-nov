@@ -1,6 +1,6 @@
 const nextConfig = {
   images: {
-    domains: ["cafeu.vercel.app"],
+    domains: ["cafeu.vercel.app","images.unsplash.com","plus.unsplash.com"],
   }
 }
 

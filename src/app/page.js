@@ -25,7 +25,7 @@ export default async function Home() {
   // user will see a friendly error
   try{
        const res= await fetch('http://localhost:3000/api/movies/');
-    // no we convert the response sent by the server in jso to object
+    // now, we convert the response sent by the server in json to object
     return await res.json()
   }
   catch(err){
