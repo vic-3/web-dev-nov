@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 
 export const GET=async ()=>{
     try{
+        // connect our db
        const images={
             img1:'https://images.unsplash.com/photo-1712877334077-bbfb3475a597?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8',
             img2:"https://images.unsplash.com/photo-1712939706943-b6b3b4549937?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D",
