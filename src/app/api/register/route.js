@@ -25,7 +25,7 @@ export const POST = async (request)=>{
             // hash user password
             const salt=bcrypt.genSaltSync(16)
             const hashedPassword=bcrypt.hashSync(password,salt)
-            // store user info in 
+            // store user info in the database
             const user= await new userModel({firstName:firstName, lastName:lastName, email:email,password:hashedPassword}) 
             await user.save()
             if(user){

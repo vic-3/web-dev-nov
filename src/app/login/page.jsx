@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './login.css'
+import { useRouter } from 'next/navigation'
 export default function Login() {
    
     const [email, setEmail]=useState('')
@@ -8,9 +9,12 @@ export default function Login() {
     const [err, setErr]=useState('');
     const [FirstNameErr, setFirstNameErr]=useState('');
     const[loading,setLoading]=useState(false)
+    const router=useRouter()
 
     // create a function to handle for submission
     async function submitHandler(e){
+        
+        
        
         // prevent form default submit
         e.preventDefault();
@@ -24,6 +28,8 @@ export default function Login() {
             setErr("provide password")
         }
         else{
+        // show loader
+        setLoading(true)
             // send user data to api
             const res=await fetch('http://localhost:3000/api/login/',{
                 method:"POST",
@@ -33,13 +39,12 @@ export default function Login() {
                 // our body data type must be in json , so as to match the content-type data type(json)
                body:JSON.stringify({email,password})
         })
-        console.log(res)
-        if(res.status=="pending"){
-            setLoading(true)
-
-        }
+        
+        
         if(res.status==200){
                 // route to dashboard
+                router.replace('/dashboard')
+
         }
         else if(res.status==400)
             setErr("Inavalid credentials")
@@ -61,7 +66,8 @@ export default function Login() {
             <input type="password" className="formControl" onChange={(e)=>setPassword(e.target.value)}/>
         </div>
 
-        <button className="btn2">Submit {loading ? <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> : ""} </button>
+        <button className="btn2">Submit </button>
+        {loading ? <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> : ""} 
 
        
     </form>
