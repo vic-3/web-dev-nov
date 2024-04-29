@@ -11,7 +11,7 @@ export const GET= async ()=>{
         //    get all products from database
             const product = await productsModel.find();
             if(product){
-                return new NextResponse(JSON.stringify(product) ,{status:200})            }
+                return new NextResponse(JSON.stringify({products:product}) ,{status:200})            }
         }
 
         catch(err){
@@ -20,4 +20,11 @@ export const GET= async ()=>{
         }
     
     
+    }
+
+
+    export const PUT= async(request)=>{
+        const {desc}=await request.json()
+
+        
     }
